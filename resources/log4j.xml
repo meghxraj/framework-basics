@@ -17,10 +17,11 @@
 			<!-- additivity = "false" is used to avoid duplicate logging on root level-->
 			<AppendRef ref="Console" />
 		</Logger>
-
 		<Root level="trace">
 			<!-- give the where to log reference to what to log-->
 			<AppenderRef ref="Console" />
 		</Root>
 	</Loggers>
-</Configuration> <!-- after all the configuration is completed, we have to add the this config to project build path under sources-->
+</Configuration> 
+
+<!-- after all the configuration is completed, we have to add the this config to project build path under sources-->
