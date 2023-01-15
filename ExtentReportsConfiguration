@@ -1,0 +1,177 @@
+
+ExtentReports property Examples
+
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <extentX>
+            <property name="reportName">My Test Report</property>
+            <property name="documentTitle">My Test Report</property>
+            <property name="reportHeadline">My Test Report</property>
+            <property name="browserConnectionEnabled">true</property>
+            <property name="startBrowserConnectionDebugging">false</property>
+            <property name="jsErrorCheckingEnabled">true</property>
+            <property name="jsErrorCheckingTimeout">2000</property>
+            <property name="remoteWebDriverUrl">http://localhost:4444/wd/hub</property>
+            <property name="applicationName"></property>
+            <property name="encoding">UTF-8</property>
+            <property name="theme">standard</property>
+            <property name="timeStampFormat">MMM dd, yyyy hh:mm:ss a</property>
+            <property name="testView">TEST</property>
+            <property name="reportPath">./test-output/extent-report.html</property>
+            <property name="chartVisibilityOnOpen">true</property>
+            <property name="chartLocation">top</property>
+            <property name="chartImagesLocation">images/</property>
+            <property name="chartType">bar</property>
+            <property name="debug">false</property>
+            <property name="appendExisting">false</property>
+        </extentX>
+    </configuration>
+</extentreports>
+
+
+
+The properties added here include:
+
+encoding: The encoding of the report
+theme: The theme of the report (can be "standard" or "dark")
+timeStampFormat: The format of the timestamp in the report
+testView: The view of the report (can be "TEST" or "LOG")
+reportPath: The file path where the report will be generated
+chartVisibilityOnOpen: Whether charts are visible when the report is opened
+chartLocation: The location of the charts in the report (can be "top" or "bottom")
+chartImagesLocation: The location of the images for the charts
+chartType: The type of chart to use (can be "bar" or "pie")
+debug: Whether to enable debug mode
+appendExisting: Whether to append to an existing report or create a new one
+
+
+reportName: The name of the report.
+documentTitle: The title of the document.
+reportHeadline: The headline of the report.
+browserConnectionEnabled: Whether to enable browser connection.
+startBrowserConnectionDebugging: Whether to start browser connection debugging.
+jsErrorCheckingEnabled: Whether to enable JavaScript error checking.
+jsErrorCheckingTimeout: The timeout for JavaScript error checking.
+remoteWebDriverUrl: The URL of the remote web driver.
+applicationName: The name of the application under test.
+encoding: The encoding of the report.
+theme: The theme of the report (can be "standard" or "dark").
+timeStampFormat: The format of the timestamp in the report.
+testView: The view of the report (can be "TEST" or "LOG").
+reportPath: The file path where the report will be generated.
+chartVisibilityOnOpen: Whether charts are visible when the report is opened.
+chartLocation: The location of the charts in the report (can be "top" or "bottom").
+chartImagesLocation: The location of the images for the charts.
+chartType: The type of chart to use (can be "bar" or "pie").
+debug: Whether to enable debug mode.
+appendExisting: Whether to append to an existing report or create a new one.
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+ExtentReports CSS Styling:
+
+
+Changing the color scheme:
+ 
+/* Change the background color of the report */
+body {
+    background-color: #f2f2f2;
+}
+
+/* Change the text color of the headings */
+h1, h2, h3 {
+    color: #333;
+}
+
+
+
+
+
+Adding custom fonts:
+ 
+/* Include the font file in your project */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./fonts/my-custom-font.ttf') format('truetype');
+}
+
+/* Use the custom font in your report */
+body {
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+
+
+
+
+
+Adding custom images:
+ 
+<img src="./images/my-custom-image.png" alt="My Custom Image">
+
+
+
+
+dding custom logos:
+ 
+<img src="./images/my-custom-logo.png" alt="My Custom Logo" class="logo">
+ 
+/* Style the logo */
+.logo {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+
+
+Customizing charts:
+ 
+// Customize the chart using JavaScript
+var chart = new Chart(chartId, {
+    type: 'bar',
+    data: { ... },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
+        legend: {
+            position: 'bottom'
+        }
+    }
+});
+ 
+/* Customize the chart using CSS */
+.chart {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+
+
+Customizing the layout:
+ 
+/* Center the content in the report */
+.content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Add a margin to the top of the report */
+body {
+    margin-top: 50px;
+}
